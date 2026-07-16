@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>MR. SUDZ mobile detail and car wash — Mobile Auto Detailing in Henderson</title>
+<style>
+  :root{
+    --ink:#0b1c2c; --mid:#0e7490; --pop:#22d3ee;
+    --bg:#fafaf9; --card:#ffffff; --text:#1c1917; --muted:#57534e;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+  a{color:inherit}
+
+  /* ── preview ribbon (the pitch) ── */
+  .ribbon{position:sticky;top:0;z-index:50;background:#fef3c7;border-bottom:2px solid #f59e0b;padding:10px 16px;font-size:14px;text-align:center}
+  .ribbon b{color:#92400e}
+  .ribbon .cta{display:inline-block;margin-left:8px;background:#f59e0b;color:#fff;border-radius:999px;padding:2px 12px;font-weight:700;text-decoration:none;font-size:13px}
+
+  /* ── hero ── */
+  .hero{background:linear-gradient(135deg,var(--ink) 0%,var(--mid) 100%);color:#fff;padding:72px 20px 88px;text-align:center;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;inset:auto -10% -55% -10%;height:75%;background:radial-gradient(ellipse at center,var(--pop) 0%,transparent 65%);opacity:.28;pointer-events:none}
+  .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 16px;font-size:14px;font-weight:600}
+  .badge .stars{color:#fbbf24;letter-spacing:1px}
+  h1{font-size:clamp(30px,6vw,52px);font-weight:800;margin:18px auto 10px;max-width:900px;letter-spacing:-.02em}
+  .sub{font-size:clamp(16px,2.5vw,20px);opacity:.9;max-width:640px;margin:0 auto 30px}
+  .btnrow{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
+  .btn{display:inline-block;border-radius:12px;padding:14px 28px;font-size:17px;font-weight:700;text-decoration:none;transition:transform .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.solid{background:var(--pop);color:var(--ink)}
+  .btn.ghost{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.5)}
+
+  /* ── sections ── */
+  section{max-width:1060px;margin:0 auto;padding:64px 20px}
+  h2{font-size:clamp(24px,4vw,34px);font-weight:800;text-align:center;margin-bottom:8px;letter-spacing:-.01em}
+  .lede{text-align:center;color:var(--muted);max-width:560px;margin:0 auto 40px}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid #e7e5e4;border-radius:16px;padding:24px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+  .card .ic{width:46px;height:46px;border-radius:12px;background:color-mix(in srgb,var(--pop) 18%,#fff);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:14px}
+  .card h3{font-size:17px;margin-bottom:4px}
+  .card p{font-size:14px;color:var(--muted)}
+
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;counter-reset:step}
+  .step{background:var(--card);border:1px solid #e7e5e4;border-radius:16px;padding:24px;text-align:center}
+  .step::before{counter-increment:step;content:counter(step);display:inline-flex;width:38px;height:38px;border-radius:50%;background:var(--mid);color:#fff;font-weight:800;align-items:center;justify-content:center;margin-bottom:12px}
+
+  .proof{background:linear-gradient(135deg,var(--ink),var(--mid));border-radius:24px;color:#fff;text-align:center;padding:52px 24px}
+  .proof .big{font-size:clamp(38px,7vw,64px);font-weight:800}
+  .proof .stars{color:#fbbf24;font-size:clamp(22px,4vw,30px);letter-spacing:3px;margin:6px 0}
+  .proof a{color:var(--pop);font-weight:600}
+
+  .contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;align-items:start}
+  .contact .card ul{list-style:none}
+  .contact .card li{padding:9px 0;border-bottom:1px dashed #e7e5e4;font-size:15px}
+  .contact .card li:last-child{border-bottom:0}
+  form input,form textarea{width:100%;border:1.5px solid #d6d3d1;border-radius:10px;padding:12px;font-size:15px;margin-bottom:12px;font-family:inherit;background:#fff}
+  form button{width:100%;background:var(--mid);color:#fff;border:0;border-radius:10px;padding:14px;font-size:16px;font-weight:700;cursor:pointer}
+  .formnote{font-size:12.5px;color:var(--muted);text-align:center;margin-top:8px}
+
+  footer{background:var(--ink);color:rgba(255,255,255,.85);text-align:center;padding:36px 20px;font-size:14px}
+  footer .preview{margin-top:10px;font-size:12.5px;opacity:.75}
+  .callbar{position:fixed;bottom:0;left:0;right:0;z-index:40;display:none;background:var(--mid);padding:10px 14px;text-align:center}
+  .callbar a{color:#fff;font-weight:800;font-size:17px;text-decoration:none}
+  @media(max-width:640px){ .callbar{display:block} body{padding-bottom:52px} }
+</style>
+</head>
+<body>
+
+<div class="ribbon">
+  👋 <b>This is a preview built for MR. SUDZ mobile detail and car wash</b> — it's not live yet.
+  Want it? $99/mo, everything handled. No setup fee. No contract. We build it, host it, and keep it working — you just answer the phone.
+  
+</div>
+
+<div class="hero">
+  <div class="badge"><span class="stars">★★★★★</span> 5.0 · 85+ Google reviews</div>
+  <h1>🚗 MR. SUDZ mobile detail and car wash</h1>
+  <p class="sub">Mobile Auto Detailing in Henderson — trusted by your neighbors, rated 5.0 stars on Google.</p>
+  <div class="btnrow">
+    <a class="btn solid" href="tel:+17028070169">📞 Call (702) 807-0169</a>
+    <a class="btn ghost" href="#quote">Get a free quote</a>
+  </div>
+</div>
+
+<section>
+  <h2>What we do</h2>
+  <p class="lede">Straightforward mobile auto detailing — done right, on time, at a fair price.</p>
+  <div class="grid"><div class="card"><div class="ic">🚗</div><h3>Full interior detail</h3><p>Fast, tidy, and priced up front.</p></div><div class="card"><div class="ic">🚗</div><h3>Exterior wash & wax</h3><p>Fast, tidy, and priced up front.</p></div><div class="card"><div class="ic">🚗</div><h3>Ceramic coating</h3><p>Fast, tidy, and priced up front.</p></div><div class="card"><div class="ic">🚗</div><h3>Headlight restoration</h3><p>Fast, tidy, and priced up front.</p></div><div class="card"><div class="ic">🚗</div><h3>Engine bay cleaning</h3><p>Fast, tidy, and priced up front.</p></div><div class="card"><div class="ic">🚗</div><h3>Fleet & dealership work</h3><p>Fast, tidy, and priced up front.</p></div></div>
+</section>
+
+<section>
+  <h2>How it works</h2>
+  <div class="steps">
+    <div class="step"><h3>Reach out</h3><p>Call, text, or send the quick form — takes 30 seconds.</p></div>
+    <div class="step"><h3>Get your quote</h3><p>Clear price up front. No surprises, no pressure.</p></div>
+    <div class="step"><h3>Job done ✔</h3><p>We show up, do the work, and leave it better than we found it.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="proof">
+    <div class="big">5.0</div>
+    <div class="stars">★★★★★</div>
+    <p>from <b>85+ verified Google reviews</b></p>
+    <p style="margin-top:10px"><a href="https://maps.google.com/?cid=15832702709493151841&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" rel="noopener">Read our reviews on Google →</a></p>
+  </div>
+</section>
+
+<section id="quote">
+  <h2>Get in touch</h2>
+  <p class="lede">Free quotes. Fast replies.</p>
+  <div class="contact">
+    <div class="card">
+      <h3 style="margin-bottom:10px">MR. SUDZ mobile detail and car wash</h3>
+      <ul>
+        <li>📞 <a href="tel:+17028070169">(702) 807-0169</a></li>
+        <li>📍 Serving Henderson &amp; surrounding areas</li>
+        <li>⭐ 5.0 stars · 85+ Google reviews</li>
+        <li>🕐 Monday: 8:00 AM – 4:00 PM</li>
+      </ul>
+    </div>
+    <div class="card">
+      <form onsubmit="return false">
+        <input placeholder="Your name">
+        <input placeholder="Phone or email">
+        <textarea rows="4" placeholder="What do you need done?"></textarea>
+        <button>Request my free quote</button>
+      </form>
+      <p class="formnote">(Demo form — goes live with your real inbox &amp; instant text alerts.)</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>© 2026 MR. SUDZ mobile detail and car wash · Henderson</div>
+  <div class="preview">Website preview crafted by Neon Sites · Websites for Vegas service pros — built, hosted, and run for you.<br>
+  Your real photos, words, and colors go here — say the word and this is live this week.</div>
+</footer>
+
+<div class="callbar"><a href="tel:+17028070169">📞 Tap to call (702) 807-0169</a></div>
+</body>
+</html>
