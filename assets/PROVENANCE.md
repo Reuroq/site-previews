@@ -1,0 +1,1 @@
+All niche photos here are AI-generated (OpenAI gpt-image-2) via site-pitcher/gen_site_photos.py — owned imagery, no stock licenses. Generic niche photography; never presented as a specific business's own work.
