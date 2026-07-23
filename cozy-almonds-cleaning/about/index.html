@@ -82,6 +82,12 @@
   .areas span{background:#fff;border:1.5px solid color-mix(in srgb,var(--mid) 45%,#fff);color:var(--text);border-radius:999px;padding:9px 22px;font-size:14.5px;font-weight:700}
   .areas.svc span::before{content:"✓ ";color:var(--mid)}
 
+  /* line-by-line inclusion checklist (service pages) */
+  .chk{list-style:none;margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:0 44px}
+  @media(max-width:680px){.chk{grid-template-columns:1fr}}
+  .chk li{display:flex;gap:13px;align-items:flex-start;font-size:15.5px;font-weight:500;padding:12px 0;border-bottom:1px dashed var(--line)}
+  .chk li::before{content:"✓";flex-shrink:0;width:25px;height:25px;border-radius:50%;background:color-mix(in srgb,var(--mid) 14%,#fff);color:var(--mid);font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+
   .vals{display:grid;grid-template-columns:1fr 1fr;gap:14px}
   @media(max-width:560px){.vals{grid-template-columns:1fr}}
   .val{background:#fff;border:1px solid color-mix(in srgb,var(--mid) 30%,#fff);border-radius:14px;padding:20px}
