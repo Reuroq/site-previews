@@ -441,5 +441,15 @@ document.querySelectorAll('.gal .ph').forEach(b=>b.addEventListener('click',()=>
 lb.addEventListener('click',()=>{lb.classList.remove('open');lbi.src=''});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('open')});
 </script>
+<script>
+// first-party view ping — no cookies, no personal data; fires only after 5s on page
+// (a real person looking, not a bot bounce). Same insert-only backend as the forms.
+setTimeout(function(){try{
+  fetch('https://enwvkrumrnfksfjqovsg.supabase.co/rest/v1/neon_views',{method:'POST',headers:{apikey:'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVud3ZrcnVtcm5ma3NmanFvdnNnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA3OTcxODcsImV4cCI6MjA5NjM3MzE4N30.IzeCWY28lE81NUV7713EP8KN1RAqyvicA6xEaN_Habo',
+    Authorization:'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVud3ZrcnVtcm5ma3NmanFvdnNnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA3OTcxODcsImV4cCI6MjA5NjM3MzE4N30.IzeCWY28lE81NUV7713EP8KN1RAqyvicA6xEaN_Habo','Content-Type':'application/json',Prefer:'return=minimal'},
+    body:JSON.stringify({site:'sunset-shine-mobile-detailing',mobile:matchMedia('(max-width:820px)').matches,
+    referrer:(document.referrer||'').slice(0,200),ua:navigator.userAgent.slice(0,150)})});
+}catch(e){}},5000);
+</script>
 </body>
 </html>
