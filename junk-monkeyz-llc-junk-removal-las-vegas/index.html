@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Junk Monkeyz — junk removal in Las Vegas, NV. Rated 5.0 stars across 195+ Google reviews. Free quotes, fast replies.">
+<title>Junk Monkeyz — Junk Removal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#431407; --mid:#c2410c; --pop:#fb923c;
+    --deep:color-mix(in srgb,var(--ink) 55%,#06141a);
+    --deep2:color-mix(in srgb,var(--ink) 40%,#06141a);
+    --tint:color-mix(in srgb,var(--mid) 8%,#ffffff);
+    --bg:#ffffff; --card:#ffffff; --text:#132028; --muted:#55636d; --line:#e3e9ee;
+    --shadow:rgba(9,26,36,.25);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'DM Sans',-apple-system,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.65;font-size:16.5px}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  h1,h2,h3{font-family:'Sora',-apple-system,sans-serif;letter-spacing:-.02em}
+  .serif{font-family:'Fraunces',Georgia,serif}
+
+  /* ── preview ribbon (watermark — always topmost) ── */
+  .ribbon{position:sticky;top:0;z-index:70;background:#10161a;color:#eef3f6;padding:9px 16px;font-size:13px;text-align:center;letter-spacing:.01em}
+  .ribbon b{color:#ffd27a}
+  .ribbon .cta{display:inline-block;margin-left:10px;background:#ffd27a;color:#10161a;border-radius:999px;padding:3px 14px;font-weight:700;text-decoration:none;font-size:12.5px}
+
+  /* ── floating pill nav (glass over hero) ── */
+  .navwrap{position:sticky;top:44px;z-index:60;padding:10px clamp(10px,2vw,24px);margin-bottom:calc(-1*(74px + 20px))}
+  nav{display:flex;justify-content:space-between;align-items:center;gap:18px;max-width:1320px;margin:0 auto;padding:11px 14px 11px 18px;border-radius:999px;background:rgba(16,26,32,.42);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.14);color:#fff;transition:background .25s}
+  .navwrap.solid nav{background:rgba(13,22,28,.92)}
+  .logo{display:flex;align-items:center;gap:10px;min-width:0}
+  .logo .mark{width:40px;height:40px;border-radius:50%;background:#fff;color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0}
+  .logo .nm{font-family:'Sora',sans-serif;font-weight:800;font-size:15.5px;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .logo .sub{display:block;font-weight:700;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--pop)}
+  .navlinks{display:flex;gap:24px;font-size:14.5px;font-weight:600;align-items:center}
+  .navlinks a{text-decoration:none;color:rgba(255,255,255,.85);transition:color .15s}
+  .navlinks a:hover{color:#fff}
+  .ndrop{position:relative}
+  .ndrop .menu{position:absolute;top:100%;left:0;padding-top:12px;display:none;min-width:250px;z-index:65}
+  .ndrop:hover .menu,.ndrop:focus-within .menu{display:block}
+  .menu-inner{background:rgba(13,22,28,.96);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:8px;box-shadow:0 24px 50px -18px rgba(0,0,0,.6)}
+  .menu-inner a{display:block;padding:9px 14px;border-radius:9px;color:rgba(255,255,255,.88);text-decoration:none;font-size:14px;white-space:nowrap}
+  .menu-inner a:hover{background:rgba(255,255,255,.08);color:#fff}
+  .navside{display:flex;align-items:center;gap:9px;flex-shrink:0}
+  .navphone{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:10px 18px;font-weight:700;font-size:14px;text-decoration:none;background:rgba(255,255,255,.16);color:#fff;transition:background .15s}
+  .navphone:hover{background:rgba(255,255,255,.28)}
+  .navcta{background:var(--pop);color:var(--deep);text-decoration:none;font-weight:800;font-size:14px;padding:11px 20px;border-radius:999px;transition:transform .15s}
+  .navcta:hover{transform:translateY(-1px)}
+  @media(max-width:1080px){.navlinks{display:none}}
+  @media(max-width:640px){.navphone{display:none}.navwrap{top:40px}}
+
+  /* ── hero: full-height photo w/ slow zoom (video feel) + overlay estimator card ── */
+  .hero{position:relative;overflow:hidden;color:#fff;min-height:min(94vh,980px);display:flex;align-items:center}
+  .hero .bg{position:absolute;inset:-4%;background-size:cover;background-position:center;animation:kb 26s ease-in-out infinite alternate}
+  @keyframes kb{from{transform:scale(1)}to{transform:scale(1.09)}}
+  .hero .shade{position:absolute;inset:0;background:
+    linear-gradient(180deg,rgba(8,18,24,.62) 0%,rgba(8,18,24,.28) 34%,rgba(8,18,24,.55) 78%,rgba(8,18,24,.8) 100%),
+    radial-gradient(120% 90% at 78% 46%,rgba(8,18,24,.42),transparent 55%)}
+  .hero .inner{position:relative;z-index:3;width:100%;max-width:1320px;margin:0 auto;padding:clamp(120px,15vh,170px) clamp(18px,4vw,44px) clamp(64px,8vh,96px);display:grid;grid-template-columns:minmax(0,1.1fr) minmax(320px,420px);gap:clamp(28px,4vw,64px);align-items:center}
+  .gpill{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.94);color:var(--text);border-radius:999px;padding:8px 18px;font-size:13.5px;font-weight:700;margin-bottom:20px;box-shadow:0 12px 30px -12px rgba(0,0,0,.5)}
+  .gpill .stars{color:#f7b32b;letter-spacing:1px}
+  .gpill .g{font-weight:900;background:linear-gradient(135deg,#4285F4,#EA4335 45%,#FBBC05 70%,#34A853);-webkit-background-clip:text;background-clip:text;color:transparent}
+  h1{font-weight:800;font-size:clamp(38px,4.9vw,64px);line-height:1.06;margin:0 0 18px;text-wrap:balance;text-shadow:0 3px 24px rgba(0,0,0,.35)}
+  h1 .accent{color:var(--pop)}
+  .hero p.sub{font-size:clamp(16px,1.8vw,19px);color:rgba(255,255,255,.88);max-width:520px;margin-bottom:28px}
+  .btnrow{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:34px}
+  .btn{display:inline-flex;align-items:center;gap:10px;border-radius:999px;padding:15px 30px;font-size:16px;font-weight:700;text-decoration:none;transition:transform .15s,box-shadow .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.solid{background:#fff;color:var(--text);box-shadow:0 16px 36px -14px rgba(0,0,0,.55)}
+  .btn.ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55)}
+  .btn.ghost:hover{border-color:#fff}
+  .herochips{display:flex;gap:22px;flex-wrap:wrap}
+  .hchip{display:flex;align-items:center;gap:9px;font-size:13.5px;font-weight:600;color:rgba(255,255,255,.92)}
+  .hchip .ic{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);display:flex;align-items:center;justify-content:center;font-size:15px}
+  .scrollhint{position:absolute;left:clamp(18px,4vw,44px);bottom:18px;z-index:3;font-size:12.5px;color:rgba(255,255,255,.55);letter-spacing:.06em}
+  .scrollhint::before{content:"●";font-size:8px;margin-right:8px;color:var(--pop);animation:blink 2.2s infinite}
+  @keyframes blink{0%,100%{opacity:.3}50%{opacity:1}}
+
+  /* estimator card — headed panel floating over the hero */
+  .qcard{border-radius:20px;overflow:hidden;box-shadow:0 40px 90px -28px rgba(0,0,0,.65);border:1px solid rgba(255,255,255,.16);width:100%}
+  .qcard .qhead{background:var(--pop);color:var(--deep);padding:16px 22px}
+  .qcard .qhead h3{font-size:20px;font-weight:800}
+  .qcard .qhead p{font-size:12.5px;font-weight:700;opacity:.85}
+  .qcard .qbody{background:rgba(10,20,26,.66);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:18px 22px 20px;color:#fff}
+  .qwrap label{display:block;font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75);margin:0 0 5px 2px}
+  .qbody.qwrap input,.qbody.qwrap select,.qbody.qwrap textarea{width:100%;border:1px solid rgba(255,255,255,.28);border-radius:10px;padding:11px 13px;font-size:14.5px;margin-bottom:11px;font-family:inherit;background:rgba(255,255,255,.10);color:#fff;transition:border-color .15s}
+  .qbody.qwrap input::placeholder,.qbody.qwrap textarea::placeholder{color:rgba(255,255,255,.55)}
+  .qbody.qwrap select{color:#fff}
+  .qbody.qwrap select option{color:#132028}
+  .qbody.qwrap input:focus,.qbody.qwrap select:focus,.qbody.qwrap textarea:focus{outline:none;border-color:var(--pop)}
+  .qbody.qwrap select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23ffffff' stroke-width='2' fill='none' opacity='.7'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center}
+  .q2{display:grid;grid-template-columns:1fr 1fr;gap:0 10px}
+  .qwrap button[type=submit]{width:100%;background:var(--pop);color:var(--deep);border:0;border-radius:999px;padding:14px;font-size:16px;font-weight:800;cursor:pointer;font-family:inherit;transition:transform .15s;box-shadow:0 12px 26px -10px rgba(0,0,0,.5)}
+  .qwrap button[type=submit]:hover{transform:translateY(-1px)}
+  .qtrust{font-size:12.5px;text-align:center;margin-top:10px;color:rgba(255,255,255,.85);font-weight:600}
+  .qtrust .stars{color:#f7b32b;letter-spacing:1px}
+  .qnote{font-size:11.5px;color:rgba(255,255,255,.55);text-align:center;margin-top:7px}
+  .qdone{display:none;text-align:center;padding:26px 6px;color:#fff}
+  .qdone .ok{width:62px;height:62px;border-radius:50%;background:rgba(255,255,255,.12);border:2px solid var(--pop);color:var(--pop);font-size:30px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;animation:pop .4s cubic-bezier(.2,1.6,.4,1)}
+  @keyframes pop{from{transform:scale(.4);opacity:0}}
+  .qdone h4{font-family:'Sora',sans-serif;font-size:19px;margin-bottom:8px}
+  .qdone p{font-size:14px;color:rgba(255,255,255,.75)}
+  .qwrap.done form{display:none}
+  .qwrap.done .qdone{display:block}
+  @media(max-width:920px){.hero .inner{grid-template-columns:1fr;padding-top:130px}.scrollhint{display:none}}
+
+  /* ── solid stat bar (their signature move) ── */
+  .statbar{background:var(--pop);color:var(--deep);padding:clamp(28px,4vw,44px) clamp(18px,4vw,44px)}
+  .statbar .row{max-width:1220px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:22px;text-align:center}
+  .statbar .n{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:clamp(30px,3.4vw,42px);line-height:1.05}
+  .statbar .l{font-size:13.5px;font-weight:600;opacity:.8;margin-top:4px}
+  .statbar .cell+.cell{border-left:1px solid color-mix(in srgb,var(--deep) 18%,transparent)}
+  @media(max-width:760px){.statbar .cell+.cell{border-left:0}}
+
+  /* ── sections ── */
+  section{padding:clamp(58px,8vw,100px) clamp(18px,4vw,44px)}
+  .shell{max-width:1220px;margin:0 auto}
+  .eyebrow{display:inline-block;font-size:12.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);margin-bottom:12px}
+  h2{font-weight:800;font-size:clamp(30px,3.9vw,46px);line-height:1.12;margin-bottom:14px;text-wrap:balance}
+  h2 .accent{color:var(--mid)}
+  .lede{color:var(--muted);max-width:560px;font-size:17px}
+  .center{text-align:center}
+  .center .lede{margin:0 auto}
+  .split{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,4vw,60px);align-items:end;margin-bottom:8px}
+  @media(max-width:860px){.split{grid-template-columns:1fr}}
+
+  /* service tiles — full-bleed photo, floating icon, title overlaid bottom-center */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));gap:18px;margin-top:44px}
+  .tile{position:relative;border-radius:20px;overflow:hidden;min-height:310px;display:flex;align-items:flex-end;justify-content:center;text-decoration:none;color:#fff;background:var(--deep);transition:transform .2s,box-shadow .2s}
+  .tile:hover{transform:translateY(-5px);box-shadow:0 28px 50px -22px var(--shadow)}
+  .tile .tbg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .6s ease}
+  .tile:hover .tbg{transform:scale(1.06)}
+  .tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,22,30,.05) 35%,rgba(9,22,30,.82));pointer-events:none}
+  .tile .badge-ic{width:48px;height:48px;border-radius:50%;background:var(--pop);color:var(--deep);display:flex;align-items:center;justify-content:center;font-size:21px;position:absolute;left:16px;top:16px;z-index:2;box-shadow:0 8px 20px -8px rgba(0,0,0,.5)}
+  .tile .tcap{position:relative;z-index:2;text-align:center;padding:0 18px 24px}
+  .tile .tcap h3{font-size:21px;font-weight:800;color:#fff;margin-bottom:6px;text-shadow:0 2px 14px rgba(0,0,0,.45)}
+  .tile .lm{font-size:13.5px;font-weight:700;color:var(--pop)}
+  .tile:hover .lm{text-decoration:underline}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+  .card:hover{transform:translateY(-5px);box-shadow:0 28px 50px -24px var(--shadow)}
+  .card .ph{height:190px;background-size:cover;background-position:center;position:relative}
+  .card .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(9,22,30,.55))}
+  .card .badge-ic{width:48px;height:48px;border-radius:50%;background:var(--pop);color:var(--deep);display:flex;align-items:center;justify-content:center;font-size:21px;position:absolute;left:16px;top:16px;z-index:2;box-shadow:0 8px 20px -8px rgba(0,0,0,.5)}
+  .card .body{padding:20px 20px 20px}
+  .card h3{font-size:17px;font-weight:700;margin-bottom:6px}
+  .card p{font-size:13.5px;color:var(--muted);margin-bottom:12px}
+  .card .lm{font-size:13.5px;font-weight:700;color:var(--mid);text-decoration:none}
+  .card .lm:hover{text-decoration:underline}
+
+  /* why split — photo + floating badge, 2x2 outline value cards w/ serif titles */
+  .why{background:var(--tint)}
+  .whygrid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(28px,5vw,72px);align-items:center}
+  @media(max-width:920px){.whygrid{grid-template-columns:1fr}}
+  .whyph{position:relative}
+  .whyph img{border-radius:20px;width:100%;height:auto;box-shadow:0 30px 60px -30px var(--shadow)}
+  .floatcard{position:absolute;left:-16px;top:34px;background:#fff;border-radius:14px;padding:14px 18px;box-shadow:0 20px 44px -18px var(--shadow);text-align:center}
+  .floatcard .serif{font-size:24px;font-weight:700;color:var(--mid);line-height:1}
+  .floatcard span{display:block;font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+  .vals{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
+  @media(max-width:560px){.vals{grid-template-columns:1fr}}
+  .val{background:#fff;border:1px solid color-mix(in srgb,var(--mid) 30%,#fff);border-radius:14px;padding:20px}
+  .val .ic{font-size:19px;margin-bottom:8px;display:block}
+  .val b{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:16.5px;display:block;margin-bottom:6px}
+  .val p{font-size:13.5px;color:var(--muted)}
+
+  /* dark CTA band w/ big quote + wide estimator */
+  .darkband{background:linear-gradient(160deg,var(--deep),var(--deep2));color:#fff}
+  .darkband h2{color:#fff;text-align:center}
+  .darkband .lede{color:rgba(255,255,255,.75);text-align:center;margin:0 auto 8px}
+  .bigform{max-width:860px;margin:38px auto 0;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:clamp(22px,3.4vw,36px);backdrop-filter:blur(8px)}
+  .bigform .f3{display:grid;grid-template-columns:repeat(3,1fr);gap:0 12px}
+  .bigform .f4{display:grid;grid-template-columns:repeat(3,1fr);gap:0 12px}
+  @media(max-width:720px){.bigform .f3,.bigform .f4{grid-template-columns:1fr}}
+  .bigform.qwrap input,.bigform.qwrap select,.bigform.qwrap textarea{width:100%;border:1px solid rgba(255,255,255,.26);border-radius:10px;padding:12px 13px;font-size:14.5px;margin-bottom:12px;font-family:inherit;background:rgba(255,255,255,.09);color:#fff}
+  .bigform.qwrap input::placeholder,.bigform.qwrap textarea::placeholder{color:rgba(255,255,255,.5)}
+  .bigform.qwrap select option{color:#132028}
+  .bigform.qwrap input:focus,.bigform.qwrap select:focus,.bigform.qwrap textarea:focus{outline:none;border-color:var(--pop)}
+  .bigform.qwrap select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23ffffff' stroke-width='2' fill='none' opacity='.7'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center}
+  .bigform .fnote{text-align:center;font-size:13px;color:rgba(255,255,255,.7);margin-top:10px;font-weight:600}
+  .orcall{text-align:center;margin-top:22px;font-size:15px;color:rgba(255,255,255,.75)}
+  .orcall a{color:var(--pop);font-weight:800;text-decoration:none}
+
+  /* reviews proof */
+  .proofwrap{background:var(--tint)}
+  .proof{text-align:center;padding:clamp(46px,6vw,72px) 20px;background:#fff;border:1px solid var(--line);border-radius:24px;max-width:860px;margin:36px auto 0}
+  .proof .g{font-weight:900;font-size:34px;background:linear-gradient(135deg,#4285F4,#EA4335 45%,#FBBC05 70%,#34A853);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .proof .stars{color:#f7b32b;font-size:clamp(22px,3vw,30px);letter-spacing:6px;margin-top:6px}
+  .proof .big{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:clamp(56px,8vw,96px);line-height:1;margin:10px 0 6px}
+  .proof p{color:var(--muted)}
+  .proof a{display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-weight:700;color:var(--mid);text-decoration:none;border-bottom:2px solid color-mix(in srgb,var(--mid) 40%,#fff);padding-bottom:2px}
+
+  /* areas + full-list chips (AREAS_SECTION) — outline pill style */
+  .areas{display:flex;flex-wrap:wrap;gap:11px;margin-top:34px;justify-content:flex-start}
+  .areas span{background:#fff;border:1.5px solid color-mix(in srgb,var(--mid) 45%,#fff);color:var(--mid);border-radius:999px;padding:9px 22px;font-size:14.5px;font-weight:700}
+  .areas span::before{content:"📍 ";font-size:12px}
+  .areas.svc span{color:var(--text)}
+  .areas.svc span::before{content:"✓ ";color:var(--mid)}
+
+  /* numbered process (their 4-step strip) */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px;margin-top:48px;counter-reset:step;text-align:center}
+  .step::before{counter-increment:step;content:counter(step);font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:64px;color:var(--mid);line-height:1;display:block;margin-bottom:12px}
+  .step h3{font-size:17.5px;margin-bottom:6px}
+  .step p{font-size:14.5px;color:var(--muted)}
+
+  /* FAQ accordions */
+  .faq{max-width:820px;margin:40px auto 0}
+  .faq details{background:#fff;border:1px solid color-mix(in srgb,var(--mid) 28%,#fff);border-radius:14px;margin-bottom:12px;overflow:hidden;box-shadow:0 10px 26px -20px var(--shadow)}
+  .faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:18px 22px;font-weight:700;font-size:16px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"Show answer ▾";flex-shrink:0;font-size:12.5px;font-weight:700;color:var(--mid);background:color-mix(in srgb,var(--mid) 12%,#fff);border-radius:999px;padding:6px 14px}
+  .faq details[open] summary::after{content:"Hide ▴"}
+  .faq .a{padding:0 22px 18px;font-size:14.5px;color:var(--muted)}
+
+  /* footer — dark, 3 columns + legal band */
+  footer{background:var(--deep);color:rgba(236,244,247,.82);font-size:14px}
+  .fgrid{max-width:1220px;margin:0 auto;padding:clamp(44px,6vw,64px) clamp(18px,4vw,44px) 28px;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:36px}
+  @media(max-width:820px){.fgrid{grid-template-columns:1fr}}
+  .fbrand .mark{width:52px;height:52px;border-radius:50%;background:#fff;color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:14px}
+  .fbrand p{font-size:14px;max-width:300px}
+  footer h4{font-family:'Sora',sans-serif;color:var(--pop);font-size:15px;margin-bottom:14px}
+  footer ul{list-style:none}
+  footer li{padding:5px 0}
+  footer a{text-decoration:none;color:rgba(236,244,247,.82)}
+  footer a:hover{color:#fff}
+  .fbottom{border-top:1px solid rgba(255,255,255,.14);text-align:center;padding:22px 18px 34px}
+  .fbottom .preview{margin-top:10px;font-size:12.5px;opacity:.6;max-width:560px;margin-left:auto;margin-right:auto}
+
+  .callbar{position:fixed;bottom:0;left:0;right:0;z-index:65;display:none;background:var(--deep);padding:12px 14px;text-align:center;box-shadow:0 -8px 30px rgba(0,0,0,.25)}
+  .callbar a{color:#fff;font-weight:800;font-size:17px;text-decoration:none}
+  @media(max-width:640px){ .callbar{display:block} body{padding-bottom:56px} }
+
+  /* lead-alert toast (demo) */
+  .lead-toast{position:fixed;right:16px;bottom:16px;z-index:80;width:min(330px,calc(100vw - 32px));background:#17161c;color:#f2f0f7;border:1px solid #34323d;border-radius:18px;padding:16px 18px;box-shadow:0 24px 60px -12px rgba(0,0,0,.6);transform:translateY(24px);opacity:0;pointer-events:none;transition:transform .35s ease,opacity .35s ease}
+  .lead-toast.show{transform:none;opacity:1;pointer-events:auto}
+  .lead-toast .top{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#b7b3c4;margin-bottom:9px}
+  .lead-toast .demo{background:#ffd27a;color:#141210;border-radius:999px;padding:1px 9px;font-size:12px;letter-spacing:.06em}
+  .lead-toast .ln{font-size:16.5px;font-weight:700}
+  .lead-toast .ls{font-size:13.5px;color:#c9c5d6}
+  .lead-toast .foot{font-size:12px;color:#8f8b9d;margin-top:10px;border-top:1px dashed #34323d;padding-top:9px}
+  @media(max-width:640px){.lead-toast{bottom:72px}}
+
+  @media(prefers-reduced-motion:reduce){
+    .hero .bg{animation:none}
+    .lead-toast{transition:none}
+    .qdone .ok{animation:none}
+    .btn,.card,.navcta{transition:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="ribbon">
+  👋 <b>A preview built for Junk Monkeyz</b> — not live yet. Want it? $99/mo, everything handled.
+  <a class="cta" href="mailto:dwayne@getneonsites.com?subject=Yes — Junk Monkeyz website">Claim it →</a>
+</div>
+
+<div class="navwrap" id="navwrap">
+<nav>
+  <div class="logo">
+    <span class="mark">🚛</span>
+    <span class="nm">Junk Monkeyz<span class="sub">Junk Removal</span></span>
+  </div>
+  <div class="navlinks">
+    <div class="ndrop"><a href="#services">Services ▾</a><div class="menu"><div class="menu-inner"><a href="junk-removal/">🗑️ Junk Removal</a><a href="furniture-removal/">🛋️ Furniture Removal</a><a href="appliance-removal/">🧊 Appliance Removal</a><a href="cleanouts/">🧹 Cleanouts</a></div></div></div>
+    <a href="#why">Why Us</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="navside">
+    <a class="navphone" href="tel:+17023781010">📞 (702) 378-1010</a>
+    <a class="navcta" href="#quote">Get a Quote</a>
+  </div>
+</nav>
+</div>
+
+<header class="hero">
+  <div class="bg" style="background-image:url('/assets/junk-removal/1.jpg')"></div>
+  <div class="shade"></div>
+  <div class="inner">
+    <div>
+      <span class="gpill"><span class="g">G</span><span class="stars">★★★★★</span> 5.0 stars on Google · 195+ reviews</span>
+      <h1>Junk Removal Las Vegas. Clear The Clutter<br><span class="accent">We do the heavy lifting, so you can focus on your latest project!</span></h1>
+      <p class="sub">Junk Removal in Las Vegas, rated 5.0 stars by 195+ of your neighbors. Fair prices, fast answers, work done right.</p>
+      <div class="btnrow">
+        <a class="btn solid" href="#quote">Get My Free Quote</a>
+        <a class="btn ghost" href="#services">See What We Do</a>
+      </div>
+      <div class="herochips">
+        <span class="hchip"><span class="ic">⭐</span>5.0-star rated</span>
+        <span class="hchip"><span class="ic">📍</span>Local to Vegas</span>
+        <span class="hchip"><span class="ic">💬</span>Fast free quotes</span>
+      </div>
+    </div>
+    <aside class="qcard" id="quote">
+      <div class="qhead">
+        <h3>Get My Free Quote</h3>
+        <p>Takes less than 60 seconds</p>
+      </div>
+      <div class="qbody qwrap">
+        <form novalidate>
+          <label>Name</label>
+          <input name="nm" placeholder="Your name" autocomplete="name">
+          <label>Phone number</label>
+          <input name="ph" placeholder="(702) 555-0100" autocomplete="tel">
+          <label>Service needed</label>
+          <select name="sv" aria-label="Service needed">
+            <option value="">Select a service…</option>
+            <optgroup label="Junk Removal"><option>House hold trash</option><option>Yard Debris</option><option>Boxes</option><option>Hot Tubs</option><option>Sheds</option><option>DIY Debris</option><option>Construction Debris</option><option>Curbside Pickup</option></optgroup><optgroup label="Furniture Removal"><option>Couch/ Sectionals</option><option>Dresser</option><option>Piano</option><option>Office Furniture</option><option>Commercial Furniture</option></optgroup><optgroup label="Appliance Removal"><option>Refrigerator</option><option>Microwave</option><option>Oven & Stove top</option><option>Washer & Dryer</option><option>Dishwasher</option></optgroup><optgroup label="Cleanouts"><option>Apartment</option><option>Office</option><option>Foreclosure</option><option>Home</option><option>Estate</option><option>Storage Unit</option><option>Mobile Home</option><option>RV</option></optgroup>
+          </select>
+          <div class="q2">
+            <div>
+              <label>Property type</label>
+              <select name="pt" aria-label="Property type">
+                <option value="">Select…</option>
+                <option>House</option><option>Apartment / Condo</option><option>Commercial</option><option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label>How often</label>
+              <select name="fq" aria-label="How often">
+                <option value="">Select…</option>
+                <option>One-time</option><option>Weekly</option><option>Bi-weekly</option><option>Monthly</option>
+              </select>
+            </div>
+          </div>
+          <label>Email</label>
+          <input name="em" type="email" placeholder="you@email.com" autocomplete="email">
+          <label>Notes</label>
+          <textarea name="msg" rows="2" placeholder="Anything we should know…"></textarea>
+          <button type="submit">Get My Free Quote</button>
+        </form>
+        <div class="qdone">
+          <div class="ok">✓</div>
+          <h4>Request sent!</h4>
+          <p>On the live site, this lands in Junk Monkeyz's inbox within minutes. Watch ↘</p>
+        </div>
+        <p class="qtrust"><span class="stars">★★★★★</span> 5.0 · Trusted by 195+ neighbors</p>
+        <p class="qnote">🔒 Demo form — no info is stored or sent.</p>
+      </div>
+    </aside>
+  </div>
+  <span class="scrollhint">Scroll to explore</span>
+</header>
+
+<div class="statbar">
+  <div class="row">
+    <div class="cell"><div class="n">195+</div><div class="l">Google Reviews</div></div>
+    <div class="cell"><div class="n">5.0★</div><div class="l">Google Rating</div></div>
+    <div class="cell"><div class="n serif">✓</div><div class="l">Free, Fast Quotes</div></div>
+    <div class="cell"><div class="n">Vegas</div><div class="l">Proudly Local</div></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="shell">
+    <div class="split">
+      <div><span class="eyebrow">What we offer</span>
+      <h2>Services built for your<br><span class="accent">home &amp; business.</span></h2></div>
+      <p class="lede">Tap any service to jump to the quote form — tell us what you need and you'll hear back fast.</p>
+    </div>
+    <div class="grid"><a class="tile" href="junk-removal/"><div class="tbg" style="background-image:url('/assets/junk-removal/1.jpg')"></div><span class="badge-ic">🗑️</span><div class="tcap"><h3>Junk Removal</h3><span class="lm">Learn More →</span></div></a><a class="tile" href="furniture-removal/"><div class="tbg" style="background-image:url('/assets/junk-removal/2.jpg')"></div><span class="badge-ic">🛋️</span><div class="tcap"><h3>Furniture Removal</h3><span class="lm">Learn More →</span></div></a><a class="tile" href="appliance-removal/"><div class="tbg" style="background-image:url('/assets/junk-removal/3.jpg')"></div><span class="badge-ic">🧊</span><div class="tcap"><h3>Appliance Removal</h3><span class="lm">Learn More →</span></div></a><a class="tile" href="cleanouts/"><div class="tbg" style="background-image:url('/assets/junk-removal/4.jpg')"></div><span class="badge-ic">🧹</span><div class="tcap"><h3>Cleanouts</h3><span class="lm">Learn More →</span></div></a></div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="shell">
+    <div class="whygrid">
+      <div class="whyph">
+        <img src="/assets/junk-removal/2.jpg" alt="Junk Removal in Las Vegas" loading="lazy" width="1536" height="1024">
+        <div class="floatcard"><span class="serif">5.0★</span><span>195+ reviews</span></div>
+      </div>
+      <div>
+        <span class="eyebrow">Why Junk Monkeyz</span>
+        <h2>We treat it like<br><span class="accent">it's our own.</span></h2>
+        <p class="lede">A local team, not a franchise — real people who show up on time, do the job right, and answer when you call.</p>
+        <div class="vals">
+          <div class="val"><span class="ic">🤝</span><b>Local &amp; Owner-Run</b><p>Your call gets answered by the people doing the work — not a call center.</p></div>
+          <div class="val"><span class="ic">🏷️</span><b>Clear, Fair Pricing</b><p>An honest quote up front. No surprises, no pressure, no games.</p></div>
+          <div class="val"><span class="ic">🗓️</span><b>Flexible Scheduling</b><p>We fit into your routine instead of asking you to rearrange your day.</p></div>
+          <div class="val"><span class="ic">⭐</span><b>5.0★ Standard</b><p>195+ Google reviews from Vegas neighbors — the work speaks for itself.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="darkband">
+  <div class="shell">
+    <h2>Done right. <span style="color:var(--pop)">Every time.</span></h2>
+    <p class="lede">Tell us a little about what you need — it takes less than 60 seconds.</p>
+    <div class="bigform qwrap">
+      <form novalidate>
+        <div class="f3">
+          <div><label>Name</label><input name="nm" placeholder="Your name" autocomplete="name"></div>
+          <div><label>Phone number</label><input name="ph" placeholder="(702) 555-0100" autocomplete="tel"></div>
+          <div><label>Service type</label>
+            <select name="sv" aria-label="Service type"><option value="">Select a service…</option><optgroup label="Junk Removal"><option>House hold trash</option><option>Yard Debris</option><option>Boxes</option><option>Hot Tubs</option><option>Sheds</option><option>DIY Debris</option><option>Construction Debris</option><option>Curbside Pickup</option></optgroup><optgroup label="Furniture Removal"><option>Couch/ Sectionals</option><option>Dresser</option><option>Piano</option><option>Office Furniture</option><option>Commercial Furniture</option></optgroup><optgroup label="Appliance Removal"><option>Refrigerator</option><option>Microwave</option><option>Oven & Stove top</option><option>Washer & Dryer</option><option>Dishwasher</option></optgroup><optgroup label="Cleanouts"><option>Apartment</option><option>Office</option><option>Foreclosure</option><option>Home</option><option>Estate</option><option>Storage Unit</option><option>Mobile Home</option><option>RV</option></optgroup></select>
+          </div>
+        </div>
+        <div class="f4">
+          <div><label>Property type</label>
+            <select name="pt"><option value="">Select…</option><option>House</option><option>Apartment / Condo</option><option>Commercial</option><option>Other</option></select>
+          </div>
+          <div><label>How often</label>
+            <select name="fq"><option value="">Select…</option><option>One-time</option><option>Weekly</option><option>Bi-weekly</option><option>Monthly</option></select>
+          </div>
+          <div><label>Email</label><input name="em" type="email" placeholder="you@email.com"></div>
+        </div>
+        <label>Notes</label>
+        <textarea name="msg" rows="3" placeholder="Anything we should know about the job, access, or areas to focus on…"></textarea>
+        <button type="submit">Get My Free Quote</button>
+      </form>
+      <div class="qdone">
+        <div class="ok">✓</div>
+        <h4>Request sent!</h4>
+        <p>On the live site, this lands in Junk Monkeyz's inbox within minutes.</p>
+      </div>
+      <p class="fnote">We reply fast — usually the same day. No spam, ever.</p>
+      <p class="qnote">🔒 Demo form — no info is stored or sent.</p>
+    </div>
+    <p class="orcall">Or reach us directly — <a class="btn ghost" href="tel:+17023781010">📞 (702) 378-1010 · Tap to Call</a></p>
+  </div>
+</section>
+
+<section class="proofwrap" id="reviews">
+  <div class="shell center">
+    <span class="eyebrow">Google reviews</span>
+    <h2>Real customers.<br><span class="accent">Real reviews.</span></h2>
+    <div class="proof">
+      <div class="g">G</div>
+      <div class="stars">★★★★★</div>
+      <div class="big">5.0</div>
+      <p>from <b>195+ verified Google reviews</b></p>
+      <a href="https://maps.google.com/?cid=8044176051951820349" rel="noopener">Read our reviews on Google →</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0"><div class="shell"><div><span class="eyebrow">The full list</span><h2>If you want it gone, we haul it.</h2></div><div class="areas svc" style="margin-top:30px"><span style="font-weight:500">Junk Removal</span><span style="font-weight:500">Furniture Removal</span><span style="font-weight:500">House hold trash</span><span style="font-weight:500">Yard Debris</span><span style="font-weight:500">Boxes</span><span style="font-weight:500">Hot Tubs</span><span style="font-weight:500">Sheds</span><span style="font-weight:500">DIY Debris</span><span style="font-weight:500">Construction Debris</span><span style="font-weight:500">Curbside Pickup</span><span style="font-weight:500">Couch/ Sectionals</span><span style="font-weight:500">Dresser</span><span style="font-weight:500">Piano</span><span style="font-weight:500">Office Furniture</span><span style="font-weight:500">Commercial Furniture</span><span style="font-weight:500">Appliance Removal</span><span style="font-weight:500">Refrigerator</span><span style="font-weight:500">Microwave</span><span style="font-weight:500">Oven & Stove top</span><span style="font-weight:500">Washer & Dryer</span><span style="font-weight:500">Dishwasher</span><span style="font-weight:500">Cleanouts</span><span style="font-weight:500">Apartment Cleanout</span><span style="font-weight:500">Office Cleanout</span><span style="font-weight:500">Foreclosure Cleanout</span><span style="font-weight:500">Home Cleanout</span><span style="font-weight:500">Estate Cleanout</span><span style="font-weight:500">Storage Unit Cleanout</span><span style="font-weight:500">Mobile Home Cleanout</span><span style="font-weight:500">RV Cleanout</span></div></div></section><section style="padding-top:0"><div class="shell"><div><span class="eyebrow">Areas we serve</span><h2>All over the valley.</h2></div><div class="areas"><span>Las Vegas</span><span>North Las Vegas</span><span>Summerlin</span><span>Paradise</span><span>Henderson</span><span>Spring Valley</span><span>Sunrise Manor</span><span>Enterprise</span><span>Pahrump</span></div></div></section>
+
+<section style="padding-top:0">
+  <div class="shell center">
+    <span class="eyebrow">The process</span>
+    <h2>From first call to finished —<br><span class="accent">it's that simple.</span></h2>
+    <div class="steps">
+      <div class="step"><h3>Request your quote</h3><p>Fill out the quick form or call us directly so we understand what you need.</p></div>
+      <div class="step"><h3>Pick your service</h3><p>Choose exactly what you want done and when — one-time or recurring.</p></div>
+      <div class="step"><h3>We come prepared</h3><p>We arrive on time with the right gear and get straight to work.</p></div>
+      <div class="step"><h3>Enjoy the results</h3><p>Work done properly, backed by 195+ five-star reviews.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0" id="contact">
+  <div class="shell center">
+    <span class="eyebrow">FAQ</span>
+    <h2>Quick answers.</h2>
+    <div class="faq">
+      <details><summary>How do I get a quote?</summary><div class="a">Use the form on this page or call us — tell us what you need and you'll get a clear, no-obligation quote fast.</div></details>
+      <details><summary>What areas do you serve?</summary><div class="a">We're local to Las Vegas and serve the surrounding communities. If you're nearby, ask — the answer is usually yes.</div></details>
+      <details><summary>How fast can you schedule me?</summary><div class="a">Usually within days, not weeks. Tell us your timeline in the quote form and we'll work around it.</div></details>
+      <details><summary>Do you handle one-time and recurring work?</summary><div class="a">Both. Plenty of our customers start with a one-time job and switch to a recurring schedule once they see the results.</div></details>
+      <details><summary>Are you legit?</summary><div class="a">Judge us by the record: 5.0 stars across 195+ public Google reviews from real Vegas customers — read them for yourself above.</div></details>
+      <details><summary>What if I'm not happy with something?</summary><div class="a">Tell us and we'll make it right. That's how you get to 5.0 stars — we don't leave problems unfixed.</div></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fgrid">
+    <div class="fbrand">
+      <span class="mark">🚛</span>
+      <p><b>Junk Monkeyz</b> — junk removal that Vegas actually recommends: 5.0 stars across 195+ Google reviews.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#quote">Get a Quote</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li>📞 <a href="tel:+17023781010">(702) 378-1010</a></li>
+        <li>📍 Serving Las Vegas &amp; surrounding areas</li>
+        <li>⭐ 5.0 stars · 195+ Google reviews</li>
+        
+      </ul>
+    </div>
+  </div>
+  <div class="fbottom">
+    <div>© 2026 Junk Monkeyz · Las Vegas, Nevada</div>
+    <div class="preview">Website preview crafted by Neon Sites · Websites for Vegas service pros — built, hosted, and run for you.<br>
+    Your real photos, words, and colors go here — say the word and this is live this week.</div>
+  </div>
+</footer>
+
+<div class="callbar"><a href="tel:+17023781010">📞 Tap to call (702) 378-1010</a></div>
+
+<div class="lead-toast" id="leadToast" role="status" aria-live="polite">
+  <div class="top">📱 Lead alert <span class="demo">demo</span></div>
+  <div class="ln"></div>
+  <div class="ls"></div>
+  <div class="foot">Every lead hits your inbox minutes after it comes in — on the live site.</div>
+</div>
+
+<script>
+// demo quote forms → success state + lead-alert toast
+const toast=document.getElementById('leadToast');
+function showLead(name,service){
+  toast.querySelector('.ln').textContent='New lead: '+name;
+  toast.querySelector('.ls').textContent=service;
+  toast.classList.add('show');
+  clearTimeout(toast._h);
+  toast._h=setTimeout(()=>toast.classList.remove('show'),8000);
+}
+document.querySelectorAll('.qwrap form').forEach(f=>{
+  f.addEventListener('submit',ev=>{
+    ev.preventDefault();
+    f.closest('.qwrap').classList.add('done');
+    const name=(f.nm.value||'').trim()||'Sample customer';
+    const sel=f.sv.value||'Free quote request';
+    setTimeout(()=>showLead(name,sel),900);
+  });
+});
+toast.addEventListener('click',()=>toast.classList.remove('show'));
+
+// nav: glass → solid once scrolled past the hero
+const nw=document.getElementById('navwrap');
+addEventListener('scroll',()=>nw.classList.toggle('solid',scrollY>420),{passive:true});
+</script>
+<script>
+// first-party view ping — no cookies, no personal data; fires only after 5s on page
+// (a real person looking, not a bot bounce). Same insert-only backend as the forms.
+setTimeout(function(){try{
+  fetch('https://enwvkrumrnfksfjqovsg.supabase.co/rest/v1/neon_views',{method:'POST',headers:{apikey:'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVud3ZrcnVtcm5ma3NmanFvdnNnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA3OTcxODcsImV4cCI6MjA5NjM3MzE4N30.IzeCWY28lE81NUV7713EP8KN1RAqyvicA6xEaN_Habo',
+    Authorization:'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVud3ZrcnVtcm5ma3NmanFvdnNnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA3OTcxODcsImV4cCI6MjA5NjM3MzE4N30.IzeCWY28lE81NUV7713EP8KN1RAqyvicA6xEaN_Habo','Content-Type':'application/json',Prefer:'return=minimal'},
+    body:JSON.stringify({site:'junk-monkeyz-llc-junk-removal-las-vegas',mobile:matchMedia('(max-width:820px)').matches,
+    referrer:(document.referrer||'').slice(0,200),ua:navigator.userAgent.slice(0,150)})});
+}catch(e){}},5000);
+</script>
+</body>
+</html>
