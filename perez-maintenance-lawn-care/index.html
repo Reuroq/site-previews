@@ -166,6 +166,11 @@
   .plan li:last-child{border:0}
   .plans-note{text-align:center;font-size:13px;color:var(--muted);margin-top:20px;font-style:italic}
 
+  /* service areas */
+  .areas{display:flex;flex-wrap:wrap;gap:10px;margin-top:36px}
+  .areas span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 18px;font-size:14px;font-weight:600}
+  .areas span::before{content:"📍 ";font-size:12px}
+
   /* steps */
   .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:44px;counter-reset:step}
   .step{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px;position:relative}
@@ -318,6 +323,8 @@
 </section>
 
 <section id="plans" style="padding-top:0"><div class="shell"><div class="center"><span class="eyebrow">Plans</span><h2>Monthly yard care plans</h2></div><div class="plans"><div class="plan"><h3>Basic</h3><div class="price">$99</div><div class="per">/mo</div><ul><li>Twice-monthly visits</li><li>Mow, edge & blow</li><li>Weed control</li></ul></div><div class="plan pop"><span class="badge">Most popular</span><h3>Standard</h3><div class="price">$149</div><div class="per">/mo</div><ul><li>Weekly visits</li><li>Shrub & tree trimming</li><li>Irrigation checks</li></ul></div><div class="plan"><h3>Full service</h3><div class="price">$229</div><div class="per">/mo</div><ul><li>Everything in Standard</li><li>Seasonal color & mulch</li><li>Priority storm cleanup</li></ul></div></div><p class="plans-note">Sample plans to show your future pricing page — the real numbers are yours to set.</p></div></section>
+
+
 
 <section style="padding-top:0">
   <div class="shell">

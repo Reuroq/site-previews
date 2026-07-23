@@ -166,6 +166,11 @@
   .plan li:last-child{border:0}
   .plans-note{text-align:center;font-size:13px;color:var(--muted);margin-top:20px;font-style:italic}
 
+  /* service areas */
+  .areas{display:flex;flex-wrap:wrap;gap:10px;margin-top:36px}
+  .areas span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 18px;font-size:14px;font-weight:600}
+  .areas span::before{content:"📍 ";font-size:12px}
+
   /* steps */
   .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:44px;counter-reset:step}
   .step{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px;position:relative}
@@ -318,6 +323,8 @@
 </section>
 
 <section id="plans" style="padding-top:0"><div class="shell"><div class="center"><span class="eyebrow">Plans</span><h2>Weekly pool care plans</h2></div><div class="plans"><div class="plan"><h3>Essentials</h3><div class="price">$129</div><div class="per">/mo + tax</div><ul><li>Weekly service</li><li>Water testing</li><li>Skim, brush & vacuum</li></ul></div><div class="plan pop"><span class="badge">Most popular</span><h3>Standard</h3><div class="price">$169</div><div class="per">/mo + tax</div><ul><li>Everything in Essentials</li><li>Chemical balancing</li><li>Filter & equipment check</li></ul></div><div class="plan"><h3>Premium</h3><div class="price">$209</div><div class="per">/mo + tax</div><ul><li>Everything in Standard</li><li>Priority scheduling</li><li>Small repairs included</li></ul></div></div><p class="plans-note">Sample plans to show your future pricing page — the real numbers are yours to set.</p></div></section>
+
+
 
 <section style="padding-top:0">
   <div class="shell">
